@@ -1,40 +1,23 @@
 package steps;
 
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+// Cucumber
+import io.cucumber.java.*;
 import io.cucumber.java.en.*;
-import model.colombia.ColombiaPage;
-import model.homepage.Homepage;
-import model.homepage.OpenHomepage;
-import net.serenitybdd.screenplay.actions.Open;
+
+// Serenity
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.thucydides.core.annotations.Steps;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
-import utils.Driver;
+// JUnit
+import org.junit.Assert;
+
+// Screenplay Model
+import model.homepage.OpenHomepage;
 import model.homepage.ClickColombia;
 import model.colombia.GetColombiaMenu;
 
-import static net.serenitybdd.screenplay.actors.OnStage.withCurrentActor;
 
 public class HelloWorldSteps {
-
-    /* Serenity step libraries as action classes to make the tests easier to read
-    These classes are declared using the Serenity @Steps annotation
-    The @Steps annotation tells Serenity to create a new instance of the class, and inject any other steps or page objects that this instance might need.
-
-    @Steps
-    OpenHomepage openHomepage;
-
-    @Steps
-    ClickColombia clickColombia;
-
-    @Steps
-    GetColombiaMenu getColombiaMenu;
-    */
 
     @Before
     public void set_the_stage() {
@@ -55,10 +38,4 @@ public class HelloWorldSteps {
     public void the_Colombia_page_should_load() {
         Assert.assertEquals("COLOMBIA", GetColombiaMenu.getText(OnStage.theActorInTheSpotlight()));
     }
-
-    /*
-    @After
-    public void afterScenario() {
-        wd.quit();
-    }*/
 }
