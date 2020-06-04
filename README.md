@@ -24,7 +24,7 @@ This is the place to add your Cucumber step definitions that will match via regu
 This is the place to add your Cucumber feature files, your drivers (chromedriver in this example), and the serenity configuration file to tweak driver options.
 
 ## Actors
-
+ScreenPlay introduces the concept of Actor. Actors can perform a number of actions to achieve a particular goal. To know more about actors make sure to read this article https://serenity-bdd.github.io/theserenitybook/latest/serenity-screenplay.html.
 
 ### What is the current example
 
